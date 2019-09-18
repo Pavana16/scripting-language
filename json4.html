@@ -1,0 +1,31 @@
+<!create web page that stores the details of patients as jason objects>
+<html>
+<body>
+<p>ABC hospital</p>
+
+<p id="demo"></p>
+
+<script>
+var myobj,i,j,x = "";
+myobj = {
+	
+	"patient":[
+			{"name":"John","doctor":"XYZ","disease":[{"dname":"dengue","symptoms":["fever","pain behind eyes","nausea"]},
+			
+			{"name":"ram","doctor":"PQR","disease":[{"dname":"cancer","symptoms":["Blood in the urine","Unexpected weight loss","night 	sweats"]
+			
+		
+		]
+	
+}
+for(i in myobj.patient){
+	x+= "<h2>"+ myobj.patient[i].name+"</h2>";
+	for(j in myobj.patient[i].disease) {
+		x+= myobj.patient[i].disease[j]+"<br>";
+	}
+}
+document.getElementById("demo").innerHTML = x;
+</script>
+</body>
+</html>
+
