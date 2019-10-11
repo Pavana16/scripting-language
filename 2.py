@@ -1,0 +1,2 @@
+def letterSurround(str):
+	

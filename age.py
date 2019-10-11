@@ -1,14 +1,14 @@
 from datetime import date 
 
-def ageconvert(year,dd,mm):
+def ageconvert(x):
 	today = date.today() 
-	age = today.year - year - ((today.month, today.day) < (mm, dd)) 
-	print(age)
+	age = today.year - x.year - ((today.month,today.day) < (x.month,x.day)) 
+	
 	return age
-x=input("enter the dob da-mo-year")
-year=int(x[5:])
-dd=int(x[:1])
-mm=int(x[3:4])
 
-ageconvert(year,dd,mm)
+year=int(input("enter the year"))
+mm=int(input("enter the month"))
+dd=int(input("enter the date"))
+
+print(ageconvert(date(year,mm,dd)),"years")
 
