@@ -1,8 +1,10 @@
 
 def hourminute(x):
-	hour=0
-	num=x
-	if num>=60:
-		num=int(num)-60
-		hour=hour+1
-	print(hour)
+	if x < 60:
+		print("0:",x)
+	else: 
+		hours=x/60
+		mins=x%60
+		print(int(hours),":",mins)
+num = int(input("enter the minutes:"))
+hourminute(num)
