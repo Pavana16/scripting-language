@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>change String</title>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Enter the string">
+    <button onClick="changeString()">ENCRYPT</button>
+    <p>Encrypted string: <span></span></p>
+
+    <script type="text/javascript">
+
+        function changeString() {
+            var text = document.querySelector("input").value;
+            var encrypt = " ";
+            for (var i = 0; i < text.length; i++) {
+                if (text[i] == "z") {
+                    encrypt += "a";
+                }
+                else if (text[i] >= "a" && text[i] < "z") {
+                    console.log(text.charCodeAt(i));
+                    encrypt += String.fromCharCode(text.charCodeAt(i) + 1);
+                    //console.log(encrypt);
+                }
+                else {
+                    encrypt += text[i];
+                }
+            }
+            var newText = "";
+            for (var i = 0; i < encrypt.length; i++) {
+                //console.log(encrypt[i]);
+                if (encrypt[i] == "a" || encrypt[i] == "e" || encrypt[i] == "i" || encrypt[i] == "o" || encrypt[i] == "u") {
+                    //encrypt[i] = String.fromCharCode(encrypt.charCodeAt(i)-32);
+                    newText += encrypt[i].toUpperCase();
+                    //console.log(encrypt[i]);
+                }
+                else {
+                    newText += encrypt[i];
+                }
+            }
+            document.querySelector("span").innerText = newText;
+        }
+    </script>
+
+</body>
+
+</html>

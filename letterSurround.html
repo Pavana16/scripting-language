@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>letter Surrounding</title>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Enter the string">
+    <button onclick="letterSurround()">Submit</button>
+    <p>Result: <span></span></p>
+
+    <script type="text/javascript">
+
+        function letterSurround() {
+            var text = document.querySelector("input").value;
+            if (text[0] >= "a" && text[0] <= "z" || (text[text.length - 1] >= "a" && text[text.length - 1] <= "z")) {
+                document.querySelector("span").innerText = "False";
+                return;
+            }
+            else {
+                for (var i = 0; i < text.length; i++) {
+                    if (text[i] >= "a" && text[i] <= "z") {
+                        if (text[i - 1] != "+" || text[i + 1] != "+") {
+                            document.querySelector("span").innerText = "False";
+                            return;
+                        }
+                    }
+                }
+                document.querySelector("span").innerText = "True";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
