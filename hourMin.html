@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <input type="number" placeholder="Enter the total number of minutes" class="mins">
+    <button onClick="HourMin()">Submit</button>
+    <p></p>
+
+
+    <script type="text/javascript">
+
+
+        function HourMin() {
+            var num = document.querySelector(".mins").value;
+            if (num < 60) {
+                document.querySelector("p").innerText = String("0:" + num);
+            }
+            else {
+                var hours = num / 60;
+                var mins = num % 60;
+                document.querySelector("p").innerText = String(parseInt(hours) + ":" + mins)
+            }
+        }
+    </script>
+
+</body>
+
+</html>
