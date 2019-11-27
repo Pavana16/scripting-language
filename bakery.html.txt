@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .wrapper {
+            width: 50%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+
+    <title>Bakery</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>Sam's Bakery</h1>
+
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Price(Click to buy)</th>
+            </tr>
+            <tr>
+                <td>
+                    Cake
+                </td>
+                <td>
+                    <button onClick='display("cake",200)'> Rs 200</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Chips
+                </td>
+                <td>
+                    <button onClick='display("chips",50)'>Rs 50</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Puffs
+                </td>
+                <td>
+                    <button onClick='display("puffs",40)'>Rs 40</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    biscuits
+                </td>
+                <td>
+                    <button onClick='display("biscuits",30)'>RS 30</button>
+                </td>
+            </tr>
+
+        </table>
+<script>
+        var totalCost = 0;
+        function display(item, cost) {
+            var ul = document.getElementById("items");
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(`${item}: ${cost}`));
+            ul.appendChild(li);
+            totalCost += cost;
+            document.getElementById('disp').innerText = totalCost;
+        }
+    </script>
+
+
+</body>
+
+</html>
