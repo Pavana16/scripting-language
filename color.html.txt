@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        .wrapper {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        hr {
+            width: 60%;
+        }
+        .colors {
+            padding-left: 0;
+        }
+        li {
+            padding: 5px;
+            text-align: center;
+            width: 40%;
+            border-radius: 5px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        li:hover {
+            box-shadow: 1px 2px;
+            transition: 0.5s;
+        }
+    </style>
+
+
+    <title>Colors</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>Color And Hex Codes</h1>
+        <hr>
+        <ul class="colors">
+
+        </ul>
+    </div>
+
+
+    <script>
+        var colors = [{
+            "name": "red",
+            "hex": "#FF0000"
+        }, {
+            "name": "blue",
+            "hex": "#0000ff"
+        }, {
+            "name": "black",
+            "hex": "#000000"
+        }];
+        var x = "";
+        for (k in colors) {
+            x += `<li style="color:${colors[k].name}; border:1px solid ${colors[k].name};"><b>` + colors[k].name + "</b> : " + colors[k].hex + "</li>";
+        }
+        document.querySelector(".colors").innerHTML = x;
+    </script>
+
+</body>
+
+</html>

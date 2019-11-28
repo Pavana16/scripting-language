@@ -1,0 +1,30 @@
+<html>
+<head>
+<h1>Amity health care</h1>
+</head>
+<body>
+<p><h3>The records of the patients and their respective doctors.</p>
+<p id="Demo"></p>
+<script>
+var pobj,i,j,x="";
+pobj={
+	"PatientandDoctor":[
+			{"Name":"X","Doctor_assigned":"Dr.B.M.Hegde","Disease":"Fever","Symptoms"=["Head ache","chills","sweating",
+"general weakness"]},
+		
+		{"Name":"Q","Doctor_assigned":"Dr.S.L.Sharma","Disease":"Migraine","Symptoms"=["Severe headache","Sensitivity to light and smell","Nausea"]},
+		{"Name":"QX","Doctor_assigned":"Dr.A.B","Disease":"Asthma","Symptoms"=["Shortness of breath","Wheezing","Nausea"]}
+]
+}
+for(i in pobj.PatientandDoctor) {
+		x+="<h2>"+pobj.PatientandDoctor[i].Name+" </h2>";
+		x+="<h2>"+pobj.PatientandDoctor[i].Doctor_assigned+" </h2>";
+		x+="<h2>"+pobj.PatientandDoctor[i].Disease+" </h2>";
+		for(j in myobj.PatientandDoctor[i].Symptoms) {
+			x+=myobj.PatientandDoctor[i].Symptoms[j]+"<br>";
+		}
+	}
+document.getElementById("Demo").innerHTML = x;
+</script>
+</body>
+</html>

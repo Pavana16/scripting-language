@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        * {
+            padding: 20px;
+            margin: 20px;
+        }
+        .container {
+            width: 50%;
+            height: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .hidden {
+            display: none;
+        }
+        .display {
+            display: block;
+        }
+        .hidden,
+        .display {
+            border: 1px solid black;
+        }
+    </style>
+
+
+    <title>Cars</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        var cars = [{
+            "model": "v2",
+            "name": "corolla",
+            "price": "2000000",
+            "year": "2018"
+        }, {
+            "model": "v1",
+            "name": "CyberTruck",
+            "price": "3500000",
+            "year": "2019"
+        }, {
+            "model": "v3",
+            "name": "Maruti800",
+            "price": "100000",
+            "year": "2009"
+        }]
+        var cont = document.querySelector(".container");
+        for (var i = 0; i < cars.length; i++) {
+            let name = document.createElement("div");
+            name.setAttribute('class', 'name');
+            name.setAttribute('value', `${cars[i].name}`);
+            name.textContent = `${cars[i].name}`;
+            name.setAttribute("onclick", "disp(this)");
+            cont.appendChild(name);
+            let details = document.createElement("div");
+            details.setAttribute("class", `hidden ${cars[i].name}`);
+            details.textContent = `Model: ${cars[i].model}\tPrice: ${cars[i].price}\tYear: ${cars[i].year}`;
+            cont.appendChild(details);
+        }
+        function disp(car) {
+            //console.log(car.textContent);
+            var listItem = document.querySelector(`.${car.textContent}`);
+            listItem.classList.toggle("display");
+        }
+    </script>
+
+
+</body>
+
+</html>
