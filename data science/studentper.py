@@ -1,16 +1,16 @@
 
-a)Load the ‘Student Performance’ dataset into one of the data structures (NumPy or Pandas).
+a)Load the â€˜Student Performanceâ€™ dataset into one of the data structures (NumPy or Pandas).
 
 b)Display header rows and description of the loaded dataset.
 
-c) Remove unnecessary features (E.g. drop unwanted columns) from the dataset such as ‘lunch’ and ‘test preparation course’ .
+c) Remove unnecessary features (E.g. drop unwanted columns) from the dataset such as â€˜lunchâ€™ and â€˜test preparation courseâ€™ .
 
-d) Manipulate data by replacing empty column values in ‘parental level of education’ with a default value.
+d) Manipulate data by replacing empty column values in â€˜parental level of educationâ€™ with a default value.
 
-e) Convert the attribute ‘race/ethnicity’ to have ‘groupA’ to be ‘Asian Students’, ‘groupB’ to be ‘African Students’ , ‘groupC’ to be ‘Afro-Asian Students’, ‘groupD’ to be ‘American Students’ and ‘groupE’ to be ‘European Students’.
+e) Convert the attribute â€˜race/ethnicityâ€™ to have â€˜groupAâ€™ to be â€˜Asian Studentsâ€™, â€˜groupBâ€™ to be â€˜African Studentsâ€™ , â€˜groupCâ€™ to be â€˜Afro-Asian Studentsâ€™, â€˜groupDâ€™ to be â€˜American Studentsâ€™ and â€˜groupEâ€™ to be â€˜European Studentsâ€™.
 
-f) Perform the following visualizations on the loaded dataset: i) Tally of the Number of Male & Female students who took up the ‘test preparation course’ and those who did not. ii) Total Number of Male & Female Students belonging to each student group iii) No of students who ‘failed’(less than 40), ‘second class’(between 40 & 50).
-‘first class’(between 60 & 75) and ‘distinction’(above 75) in ‘Maths’, ‘Reading’ and ‘Writing’.
+f) Perform the following visualizations on the loaded dataset: i) Tally of the Number of Male & Female students who took up the â€˜test preparation courseâ€™ and those who did not. ii) Total Number of Male & Female Students belonging to each student group iii) No of students who â€˜failedâ€™(less than 40), â€˜second classâ€™(between 40 & 50).
+â€˜first classâ€™(between 60 & 75) and â€˜distinctionâ€™(above 75) in â€˜Mathsâ€™, â€˜Readingâ€™ and â€˜Writingâ€™.
 
 In [2]:
 import numpy as np
@@ -127,11 +127,11 @@ gender	race/ethnicity	parental level of education	lunch	test preparation course	
 3	male	Asian Students	associate's degree	free/reduced	NO	47	57	44	148
 4	male	Afro-Asian Students	NaN	standard	NO	76	78	75	229
 No of students who
-‘failed’(less than 40)
-‘second class’(between 40 & 50).
-‘first class’(between 60 & 75)
-'distinction’(above 75)
-in ‘Maths’, ‘Reading’ and ‘Writing
+â€˜failedâ€™(less than 40)
+â€˜second classâ€™(between 40 & 50).
+â€˜first classâ€™(between 60 & 75)
+'distinctionâ€™(above 75)
+in â€˜Mathsâ€™, â€˜Readingâ€™ and â€˜Writing
 In [16]:
 interval = (0,40,50,75,120)
 categories = ['Failed','Second Class','First Class', 'Distinction']
@@ -226,6 +226,6 @@ variable	value
 2997	write_cat	First Class
 2998	write_cat	Distinction
 2999	write_cat	Distinction
-3000 rows × 2 columns
+3000 rows Ã— 2 columns
 
 
